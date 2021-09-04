@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'BARO' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Baro_user_ios
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SwiftyBootpay', '~> 3.2.7'
+  pod 'Kingfisher', '~>4.7'
+  pod "AlignedCollectionViewFlowLayout"
+  pod 'KituraKit'
+  pod 'Alamofire', '~> 5.1.0' 
+  pod 'NMapsMap'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'FSPagerView'
+end

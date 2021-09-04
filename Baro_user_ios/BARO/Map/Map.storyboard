@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YgK-G5-tsZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansKR-Black.otf">
+            <string>NotoSansCJKkr-Black</string>
+        </array>
+        <array key="NotoSansKR-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansCJKkr-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MapController-->
+        <scene sceneID="GMi-Kz-teG">
+            <objects>
+                <viewController storyboardIdentifier="MapController" title="MapController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YgK-G5-tsZ" customClass="MapController" customModule="Baro_user_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QzN-Me-1C9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHF-cB-Bka">
+                                <rect key="frame" x="10" y="724" width="394" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="w0w-Re-3wA"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="RU2-xD-2Q4" kind="embed" id="wZf-oL-ALD"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5e-dp-7fy" customClass="NMFNaverMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qfs-rk-Ffa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qfs-rk-Ffa" firstAttribute="bottom" secondItem="eHF-cB-Bka" secondAttribute="bottom" constant="10" id="8bP-YA-gm8"/>
+                            <constraint firstItem="Qfs-rk-Ffa" firstAttribute="bottom" secondItem="K5e-dp-7fy" secondAttribute="bottom" id="GVF-xv-63w"/>
+                            <constraint firstItem="Qfs-rk-Ffa" firstAttribute="trailing" secondItem="K5e-dp-7fy" secondAttribute="trailing" id="L5d-6j-a3F"/>
+                            <constraint firstItem="K5e-dp-7fy" firstAttribute="leading" secondItem="Qfs-rk-Ffa" secondAttribute="leading" id="VtQ-Xx-Abe"/>
+                            <constraint firstItem="Qfs-rk-Ffa" firstAttribute="trailing" secondItem="eHF-cB-Bka" secondAttribute="trailing" constant="10" id="W20-yS-nZn"/>
+                            <constraint firstItem="eHF-cB-Bka" firstAttribute="leading" secondItem="Qfs-rk-Ffa" secondAttribute="leading" constant="10" id="cEa-2s-tCP"/>
+                            <constraint firstItem="K5e-dp-7fy" firstAttribute="top" secondItem="Qfs-rk-Ffa" secondAttribute="top" id="mlb-0N-g7k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SeparateWindow" destination="eHF-cB-Bka" id="wXH-Qa-uUE"/>
+                        <outlet property="map" destination="K5e-dp-7fy" id="bsq-HK-oPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htx-qs-7xQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="37.5"/>
+        </scene>
+        <!--Separate Window Controller-->
+        <scene sceneID="Pdq-1y-Zpn">
+            <objects>
+                <viewController storyboardIdentifier="SeparateWindowController" id="RU2-xD-2Q4" customClass="SeparateWindowController" customModule="Baro_user_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wxv-I4-JO0">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h09-7P-gsm">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="BDT-3a-aeg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가게이름" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WN-cw-fUi">
+                                <rect key="frame" x="148" y="15" width="236" height="22.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Black" family="Noto Sans CJK KR" pointSize="15"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG7-c1-HMx">
+                                <rect key="frame" x="148" y="47.5" width="231" height="18"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="12"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="거리" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATM-eS-BBO">
+                                <rect key="frame" x="350" y="93.5" width="24" height="19.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="13"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TS0-hn-cPX"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h09-7P-gsm" firstAttribute="centerY" secondItem="wxv-I4-JO0" secondAttribute="centerY" id="B7b-Qj-RXM"/>
+                            <constraint firstItem="TS0-hn-cPX" firstAttribute="trailing" secondItem="tG7-c1-HMx" secondAttribute="trailing" constant="15" id="LIX-qn-TPt"/>
+                            <constraint firstItem="ATM-eS-BBO" firstAttribute="bottom" secondItem="h09-7P-gsm" secondAttribute="bottom" constant="-15" id="O2V-xt-ikn"/>
+                            <constraint firstItem="tG7-c1-HMx" firstAttribute="top" secondItem="0WN-cw-fUi" secondAttribute="bottom" constant="10" id="RGY-tb-lT8"/>
+                            <constraint firstItem="TS0-hn-cPX" firstAttribute="trailing" secondItem="ATM-eS-BBO" secondAttribute="trailing" constant="20" id="Su7-6Z-VbN"/>
+                            <constraint firstItem="0WN-cw-fUi" firstAttribute="top" secondItem="h09-7P-gsm" secondAttribute="top" constant="15" id="VEZ-fm-tRo"/>
+                            <constraint firstItem="TS0-hn-cPX" firstAttribute="bottom" secondItem="h09-7P-gsm" secondAttribute="bottom" id="Xk2-cd-dN5"/>
+                            <constraint firstItem="h09-7P-gsm" firstAttribute="top" secondItem="wxv-I4-JO0" secondAttribute="top" id="ayA-dO-7is"/>
+                            <constraint firstItem="h09-7P-gsm" firstAttribute="leading" secondItem="wxv-I4-JO0" secondAttribute="leading" id="bHO-RQ-8wF"/>
+                            <constraint firstItem="0WN-cw-fUi" firstAttribute="leading" secondItem="h09-7P-gsm" secondAttribute="trailing" constant="20" id="eBH-d0-rgq"/>
+                            <constraint firstAttribute="trailing" secondItem="0WN-cw-fUi" secondAttribute="trailing" constant="10" id="gDk-h7-hyR"/>
+                            <constraint firstItem="tG7-c1-HMx" firstAttribute="leading" secondItem="h09-7P-gsm" secondAttribute="trailing" constant="20" id="tJe-2u-H9p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Store_address_label" destination="tG7-c1-HMx" id="4cH-gp-wKd"/>
+                        <outlet property="Store_distance_label" destination="ATM-eS-BBO" id="2XC-QQ-JJO"/>
+                        <outlet property="Store_name_label" destination="0WN-cw-fUi" id="Oi1-L1-Vyw"/>
+                        <outlet property="store_image" destination="h09-7P-gsm" id="0Nf-uu-WCQ"/>
+                        <segue destination="xp3-Qa-krq" kind="presentation" identifier="goToStore" id="bYU-I2-5Rf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9e-jF-omh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540.57971014492762" y="249.77678571428569"/>
+        </scene>
+        <!--AboutStore-->
+        <scene sceneID="PcL-zI-ZBh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="goToStore" storyboardName="AboutStore" referencedIdentifier="AboutStore" id="xp3-Qa-krq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cpk-Jy-Niw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="250"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbE-QQ-MHE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Term Of User-->
+        <scene sceneID="n7B-Iw-Xox">
+            <objects>
+                <viewController storyboardIdentifier="TermOfUser" id="RbE-QQ-MHE" customClass="TermOfUser" customModule="Baro_user_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KaE-HF-Q5p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nZ-DB-5N5">
+                                <rect key="frame" x="0.0" y="116.5" width="414" height="779.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL9-Us-x8X">
+                                <rect key="frame" x="17" y="61" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Pyi-a8-vGU"/>
+                                    <constraint firstAttribute="height" constant="50" id="z7T-WP-7hA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backbutton" destination="RbE-QQ-MHE" eventType="touchUpInside" id="Bem-O4-dcq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RzN-dE-ReY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5nZ-DB-5N5" firstAttribute="height" secondItem="KaE-HF-Q5p" secondAttribute="height" multiplier="0.87" id="COc-Ie-Ix3"/>
+                            <constraint firstItem="5nZ-DB-5N5" firstAttribute="trailing" secondItem="RzN-dE-ReY" secondAttribute="trailing" id="FGk-oU-VDS"/>
+                            <constraint firstItem="5nZ-DB-5N5" firstAttribute="leading" secondItem="RzN-dE-ReY" secondAttribute="leading" id="LnO-b5-au0"/>
+                            <constraint firstItem="RL9-Us-x8X" firstAttribute="leading" secondItem="RzN-dE-ReY" secondAttribute="leading" constant="17" id="OYb-co-d30"/>
+                            <constraint firstItem="RL9-Us-x8X" firstAttribute="top" secondItem="RzN-dE-ReY" secondAttribute="top" constant="17" id="qlU-3y-ep9"/>
+                            <constraint firstAttribute="bottom" secondItem="5nZ-DB-5N5" secondAttribute="bottom" id="xPi-Ai-XaS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="RL9-Us-x8X" id="M3h-1Q-S3w"/>
+                        <outlet property="webView" destination="5nZ-DB-5N5" id="qQe-4g-QMq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXR-JA-65t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.028985507246382" y="33.482142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
